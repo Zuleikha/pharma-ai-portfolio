@@ -1,4 +1,18 @@
+# Virtual env
 venv/
+
+# Python cache / compiled files
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Jupyter
 .ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional: ignore outputs if they are generated
+# output/
