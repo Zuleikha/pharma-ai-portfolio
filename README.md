@@ -1,127 +1,108 @@
-# Pharma AI Portfolio
+# 📘 Pharma AI Portfolio
 
-A comprehensive collection of pharmaceutical and drug discovery tools using RDKit and machine learning.
+A collection of small, focused projects demonstrating practical applications of cheminformatics, AI, and computational drug design.  
+This portfolio includes Python scripts, Jupyter notebooks, and analysis outputs related to:
 
-## Overview
+- Fragment-Based Drug Design (FBDD)
+- Molecular Property Analysis
+- Molecular Docking Preparation
+- RDKit cheminformatics workflows
 
-This repository contains tools and utilities for computational drug discovery, molecular analysis, and pharmaceutical research. It leverages RDKit for cheminformatics and includes various modules for drug design and molecular property prediction.
-
-## Features
-
-- **Molecular Property Analysis**: Calculate and analyze molecular descriptors and drug-likeness properties
-- **Fragment-Based Drug Design**: Tools for fragment library generation and optimization
-- **Molecular Docking Preparation**: Prepare molecules for docking studies with proper 3D conformations
-
-## Repository Structure
+## 📂 Project Structure
 
 ```
 pharma-ai-portfolio/
-├── 01-rdkit-basics/       # Basic RDKit tutorials and examples
-├── src/                   # Source code modules
-│   ├── molecular_property_analyzer.py
-│   ├── fragment_based_drug_design.py
-│   └── molecular_docking_prep.py
-├── images/                # Images and visualizations
-└── README.md             # This file
+│
+├─ src/
+│   ├─ fragment_based_drug_design.py
+│   ├─ molecular_docking_prep.py
+│   ├─ molecular_property_analyzer.py
+│
+├─ notebooks/
+│   ├─ fragment_based_drug_design.ipynb
+│   ├─ molecular_property_analysis.ipynb
+│   ├─ drug_analysis_demo.ipynb
+│   ├─ Molecular Docking Preparation.ipynb
+│
+├─ output/
+│   └─ molecular_analysis_results.csv
+│
+└─ README.md
 ```
 
-## Installation
+### Folder Descriptions
 
-### Prerequisites
+#### `src/`
+Contains Python scripts for core logic:
+- **fragment_based_drug_design.py** — performs fragment decomposition, recombination, and scoring.
+- **molecular_docking_prep.py** — prepares ligands for docking (cleaning, protonation, etc.).
+- **molecular_property_analyzer.py** — calculates RDKit-based physicochemical properties.
 
-- Python 3.7+
+#### `notebooks/`
+Interactive Jupyter notebooks used for:
+- Demonstrations
+- Data exploration
+- Visualizations
+- Step-by-step workflows
+
+#### `output/`
+Contains exported results from analyses:
+- Molecular property tables
+- Fragment analysis outputs
+- Docking prep summaries
+
+## 🚀 Installation
+
+### 1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/pharma-ai-portfolio.git
+cd pharma-ai-portfolio
+```
+
+### 2. Create & activate a virtual environment:
+```bash
+python -m venv venv
+source venv/Scripts/activate   # Git Bash on Windows
+```
+
+### 3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## 🧪 Requirements
+Main libraries used:
+
 - RDKit
 - NumPy
-- Pandas (optional, for data handling)
+- Pandas
+- Matplotlib
+- Scikit-learn (optional)
 
-### Install RDKit
+Add them to your `requirements.txt` if you plan to publish the repo.
 
-```bash
-# Using conda (recommended)
-conda install -c conda-forge rdkit
-
-# Using pip
-pip install rdkit
-```
-
-## Usage
-
-### Molecular Property Analyzer
-
-```python
-from src.molecular_property_analyzer import MolecularPropertyAnalyzer
-
-analyzer = MolecularPropertyAnalyzer()
-smiles = "CC(=O)Oc1ccccc1C(=O)O"  # Aspirin
-properties = analyzer.analyze_molecule(smiles)
-print(properties)
-```
+## 📊 Example Workflows
 
 ### Fragment-Based Drug Design
+- Decompose molecules into fragments
+- Recombine fragments
+- Score candidates using property filters
 
-```python
-from src.fragment_based_drug_design import FragmentBasedDesign
+### Molecular Property Analysis
+- Calculate LogP, MW, PSA, HBD/HBA, etc.
+- Export tabular results
 
-designer = FragmentBasedDesign()
-fragments = designer.generate_fragments("CCO")
-print(f"Generated {len(fragments)} fragments")
-```
+### Docking Preparation
+- Clean molecular structures
+- Add hydrogens and optimize geometry
+- Prepare SMILES → SDF conversion pipeline
 
-### Molecular Docking Preparation
+## 📝 Notes
+This portfolio is a work-in-progress collection of computational chemistry workflows.  
+More modules and notebook demos will be added over time.
 
-```python
-from src.molecular_docking_prep import MolecularDockingPrep
+## 🤝 Contributing
+Pull requests and improvements are welcome.
 
-prep = MolecularDockingPrep()
-mol = prep.prepare_ligand("CC(C)Cc1ccc(cc1)C(C)C(=O)O")  # Ibuprofen
-prep.write_mol_file(mol, "ibuprofen_3d.mol")
-```
-
-## Modules
-
-### molecular_property_analyzer.py
-Calculates molecular properties including:
-- Molecular weight
-- LogP (lipophilicity)
-- Number of hydrogen bond donors/acceptors
-- Topological polar surface area (TPSA)
-- Lipinski's Rule of Five compliance
-- Quantitative Estimate of Drug-likeness (QED)
-
-### fragment_based_drug_design.py
-Tools for fragment-based drug design:
-- RECAP fragmentation
-- BRICS fragmentation
-- Fragment library generation
-- Scaffold extraction
-- Fragment filtering and scoring
-
-### molecular_docking_prep.py
-Prepares molecules for molecular docking:
-- 3D conformation generation
-- Energy minimization
-- Protonation state assignment
-- File format conversion (PDB, MOL2, SDF)
-- Multiple conformer generation
-
-## Examples
-
-See the `01-rdkit-basics/` directory for introductory examples and tutorials.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues or pull requests.
-
-## License
-
-This project is open source and available for educational and research purposes.
-
-## References
-
-- RDKit: Open-source cheminformatics - https://www.rdkit.org/
-- Lipinski, C. A. et al. (2001). Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings.
-- Bickerton, G. R. et al. (2012). Quantifying the chemical beauty of drugs. Nature Chemistry, 4(2), 90-98.
-
-## Contact
-
-For questions or suggestions, please open an issue on GitHub.
+## 📄 License
+MIT License.
