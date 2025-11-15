@@ -1,108 +1,107 @@
-# 📘 Pharma AI Portfolio
+# 🧬 Pharma-AI Portfolio  
+**TL;DR:** A collection of small, focused projects in computational chemistry + structural bioinformatics. Each folder = one workflow. Minimal fluff, maximum clarity.
 
-A collection of small, focused projects demonstrating practical applications of cheminformatics, AI, and computational drug design.  
-This portfolio includes Python scripts, Jupyter notebooks, and analysis outputs related to:
-
-- Fragment-Based Drug Design (FBDD)
-- Molecular Property Analysis
-- Molecular Docking Preparation
-- RDKit cheminformatics workflows
-
-## 📂 Project Structure
+# 📁 Project Structure
 
 ```
 pharma-ai-portfolio/
 │
-├─ src/
+├─ alphafold_target_pipeline/      # Protein folding + structure analysis (AlphaFold)
+│   ├─ data/
+│   ├─ notebooks/
+│   ├─ src/
+│   └─ output/
+│
+├─ src/                            # Core Python scripts
 │   ├─ fragment_based_drug_design.py
 │   ├─ molecular_docking_prep.py
 │   ├─ molecular_property_analyzer.py
 │
-├─ notebooks/
+├─ notebooks/                      # Interactive workflows
 │   ├─ fragment_based_drug_design.ipynb
 │   ├─ molecular_property_analysis.ipynb
 │   ├─ drug_analysis_demo.ipynb
 │   ├─ Molecular Docking Preparation.ipynb
 │
-├─ output/
+├─ output/                         # Generated results
 │   └─ molecular_analysis_results.csv
 │
 └─ README.md
 ```
 
-### Folder Descriptions
+# 📂 Folder Descriptions
 
-#### `src/`
-Contains Python scripts for core logic:
-- **fragment_based_drug_design.py** — performs fragment decomposition, recombination, and scoring.
-- **molecular_docking_prep.py** — prepares ligands for docking (cleaning, protonation, etc.).
-- **molecular_property_analyzer.py** — calculates RDKit-based physicochemical properties.
+### **src/**
+Core logic scripts:
+- `fragment_based_drug_design.py` — fragmenting, recombining, scoring  
+- `molecular_docking_prep.py` — ligand cleaning, protonation, geometry prep  
+- `molecular_property_analyzer.py` — RDKit property calculations  
 
-#### `notebooks/`
-Interactive Jupyter notebooks used for:
-- Demonstrations
-- Data exploration
-- Visualizations
-- Step-by-step workflows
+### **notebooks/**
+Quick interactive demos:
+- Data exploration  
+- Visualizations  
+- End-to-end mini workflows  
 
-#### `output/`
-Contains exported results from analyses:
-- Molecular property tables
-- Fragment analysis outputs
-- Docking prep summaries
+### **alphafold_target_pipeline/**
+Protein structure project:
+- Sequence → AlphaFold prediction → pocket analysis → ligand exploration
 
-## 🚀 Installation
+### **output/**
+Exported results:
+- Property tables  
+- Fragment outputs  
+- Docking prep summaries  
 
-### 1. Clone the repository:
+# 🚀 Installation
+
 ```bash
 git clone https://github.com/yourusername/pharma-ai-portfolio.git
 cd pharma-ai-portfolio
 ```
 
-### 2. Create & activate a virtual environment:
+Create & activate a virtual environment:
+
 ```bash
 python -m venv venv
-source venv/Scripts/activate   # Git Bash on Windows
+source venv/Scripts/activate  # Windows (Git Bash)
 ```
 
-### 3. Install dependencies:
+Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-## 🧪 Requirements
-Main libraries used:
+# 🧪 Requirements
 
-- RDKit
-- NumPy
-- Pandas
-- Matplotlib
+Core libraries:
+- RDKit  
+- NumPy  
+- Pandas  
+- Matplotlib  
 - Scikit-learn (optional)
 
-Add them to your `requirements.txt` if you plan to publish the repo.
+# 📊 Example Workflows
 
-## 📊 Example Workflows
+**Fragment-Based Drug Design**  
+Fragment → recombine → score → filter.
 
-### Fragment-Based Drug Design
-- Decompose molecules into fragments
-- Recombine fragments
-- Score candidates using property filters
+**Molecular Property Analysis**  
+Compute LogP, MW, PSA, HBD/HBA → export.
 
-### Molecular Property Analysis
-- Calculate LogP, MW, PSA, HBD/HBA, etc.
-- Export tabular results
+**Docking Preparation**  
+Clean → add H → optimize → SMILES → SDF.
 
-### Docking Preparation
-- Clean molecular structures
-- Add hydrogens and optimize geometry
-- Prepare SMILES → SDF conversion pipeline
+**AlphaFold Pipeline**  
+Protein sequence → predicted 3D structure → pocket → ligands.
 
-## 📝 Notes
-This portfolio is a work-in-progress collection of computational chemistry workflows.  
-More modules and notebook demos will be added over time.
+# 📝 Notes  
+Portfolio is actively growing — more workflows coming soon.  
+Each project is intentionally small, clear, and self-contained.
 
-## 🤝 Contributing
-Pull requests and improvements are welcome.
+# 🤝 Contributing  
+PRs and suggestions welcome.
 
-## 📄 License
+# 📄 License  
 MIT License.
