@@ -97,7 +97,7 @@ Clean → add H → optimize → SMILES → SDF.
 Protein sequence → predicted 3D structure → pocket → ligands.
 
 # 📝 Notes  
-Portfolio is actively growing — more workflows coming soon.  
+Portfolio is actively growing - more workflows coming soon.  
 Each project is intentionally small, clear, and self-contained.
 
 # 🤝 Contributing  
