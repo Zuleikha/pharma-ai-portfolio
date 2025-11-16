@@ -1,107 +1,199 @@
 # 🧬 Pharma-AI Portfolio  
-**TL;DR:** A collection of small, focused projects in computational chemistry + structural bioinformatics. Each folder = one workflow. Minimal fluff, maximum clarity.
+A modular, expanding portfolio demonstrating practical skills in **computational chemistry**, **structural bioinformatics**, and **AI-driven drug discovery**.  
+Each section is a clean, self-contained workflow.
+
+---
 
 # 📁 Project Structure
 
 ```
 pharma-ai-portfolio/
 │
-├─ alphafold_target_pipeline/      # Protein folding + structure analysis (AlphaFold)
-│   ├─ data/
+├─ alphafold_target_pipeline/           # Protein folding + structure analysis
+│   ├─ data/                            # FASTA sequences
 │   ├─ notebooks/
-│   ├─ src/
-│   └─ output/
+│   │   ├─ 01_run_alphafold_colab.ipynb
+│   │   └── 02_structure_analysis.ipynb
+│   ├─ output/
+│   │   └─ structures/                  # PDBs + visualization images
+│   ├─ images/
+│   │   └─ structures/                  # PNG structural renderings
+│   └─ src/                             # (future) pocket detection, scoring
 │
-├─ src/                            # Core Python scripts
-│   ├─ fragment_based_drug_design.py
-│   ├─ molecular_docking_prep.py
-│   ├─ molecular_property_analyzer.py
-│
-├─ notebooks/                      # Interactive workflows
+├─ notebooks/                           # Small interactive workflows
 │   ├─ fragment_based_drug_design.ipynb
 │   ├─ molecular_property_analysis.ipynb
 │   ├─ drug_analysis_demo.ipynb
 │   ├─ Molecular Docking Preparation.ipynb
 │
-├─ output/                         # Generated results
+├─ src/                                 # Core reusable python modules
+│   ├─ fragment_based_drug_design.py
+│   ├─ molecular_docking_prep.py
+│   ├─ molecular_property_analyzer.py
+│
+├─ images/                              # Figures for documentation
+│
+├─ output/
 │   └─ molecular_analysis_results.csv
 │
 └─ README.md
 ```
 
-# 📂 Folder Descriptions
+---
 
-### **src/**
-Core logic scripts:
-- `fragment_based_drug_design.py` — fragmenting, recombining, scoring  
-- `molecular_docking_prep.py` — ligand cleaning, protonation, geometry prep  
-- `molecular_property_analyzer.py` — RDKit property calculations  
+# 🧩 Included Pipelines
 
-### **notebooks/**
-Quick interactive demos:
-- Data exploration  
-- Visualizations  
-- End-to-end mini workflows  
+## **1️⃣ AlphaFold Target Pipeline**
+A full structural-biology mini-workflow:
 
-### **alphafold_target_pipeline/**
-Protein structure project:
-- Sequence → AlphaFold prediction → pocket analysis → ligand exploration
+✔ Input FASTA  
+✔ Predict 3D structure (ColabFold)  
+✔ Visualize via `py3Dmol`  
+✔ Highlight active site + cysteines  
+✔ Export portfolio-ready images  
 
-### **output/**
-Exported results:
-- Property tables  
-- Fragment outputs  
-- Docking prep summaries  
+**Outputs:** → `alphafold_target_pipeline/output/structures/`
 
-# 🚀 Installation
+Examples:
+
+- `dhfr_colored_cartoon.png`  
+- `dhfr_active_site_surface.png`  
+- `DHFR_rank1.pdb`
+
+---
+
+## **2️⃣ Fragment-Based Drug Design**
+Explores:
+
+- Fragmentation  
+- Recombination  
+- Scoring  
+- Filtering  
+- Visualization  
+
+Notebook → `notebooks/fragment_based_drug_design.ipynb`  
+Core script → `src/fragment_based_drug_design.py`
+
+---
+
+## **3️⃣ Molecular Property Analysis**
+Computes RDKit-based descriptors:
+
+✔ LogP  
+✔ MW  
+✔ HBD/HBA  
+✔ PSA  
+✔ Rule-of-5 metrics  
+
+Notebook → `notebooks/molecular_property_analysis.ipynb`  
+Output → `output/molecular_analysis_results.csv`
+
+---
+
+## **4️⃣ Docking Preparation**
+Prepares molecules for docking:
+
+✔ Protonation  
+✔ Sanitization  
+✔ Geometry optimization  
+✔ SDF/MOL2/PDBQT export  
+
+Notebook → `notebooks/Molecular Docking Preparation.ipynb`  
+Script → `src/molecular_docking_prep.py`
+
+---
+
+# 🧱 Installation
 
 ```bash
 git clone https://github.com/yourusername/pharma-ai-portfolio.git
 cd pharma-ai-portfolio
 ```
 
-Create & activate a virtual environment:
+Create a virtual environment:
 
 ```bash
 python -m venv venv
-source venv/Scripts/activate  # Windows (Git Bash)
+source venv/Scripts/activate    # Windows (Git Bash)
 ```
 
-Install dependencies:
+Install required libraries:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-# 🧪 Requirements
+---
 
-Core libraries:
+# 🧪 Dependencies
+
 - RDKit  
-- NumPy  
+- Numpy / Scipy  
 - Pandas  
 - Matplotlib  
-- Scikit-learn (optional)
+- py3Dmol  
+- Biopython  
+- scikit-learn  
 
-# 📊 Example Workflows
+*(AlphaFold runs externally in Colab.)*
 
-**Fragment-Based Drug Design**  
-Fragment → recombine → score → filter.
+---
 
-**Molecular Property Analysis**  
-Compute LogP, MW, PSA, HBD/HBA → export.
+# 🖼️ Structural Images (DHFR)
 
-**Docking Preparation**  
-Clean → add H → optimize → SMILES → SDF.
+All structural PNGs are stored here:
 
-**AlphaFold Pipeline**  
-Protein sequence → predicted 3D structure → pocket → ligands.
+```
+alphafold_target_pipeline/images/structures/
+```
 
-# 📝 Notes  
-Portfolio is actively growing - more workflows coming soon.  
-Each project is intentionally small, clear, and self-contained.
+Includes:
 
-# 🤝 Contributing  
-PRs and suggestions welcome.
+- Rainbow cartoon  
+- Greyscale cartoon  
+- Atom sticks  
+- Active site (red)  
+- Cysteines (yellow)  
+- Surface map  
 
-# 📄 License  
+---
+
+# 🧬 About DHFR (Dihydrofolate Reductase)
+
+DHFR is essential for:
+
+- DNA synthesis  
+- Folate metabolism  
+- Cell growth  
+
+Important drug target for:
+
+- Cancer therapy (methotrexate)  
+- Antimicrobials (trimethoprim)  
+
+Ideal for showcasing structural biology + drug design skills.
+
+---
+
+# 🚀 Roadmap (Next Steps)
+
+1. **Binding pocket detection**  
+   fpocket / PyMol / custom geometry clustering  
+2. **Docking pipeline**  
+   AutoDock Vina / DiffDock  
+3. **Ligand preparation**  
+   RDKit protonation + minimization  
+4. **Scoring and ranking**  
+   Basic scoring + ML-based scoring  
+5. **Integration**  
+   Add results to portfolio pages + visuals  
+
+---
+
+# 🤝 Contributing
+Pull requests welcome — this portfolio evolves over time.
+
+---
+
+# 📄 License
 MIT License.
