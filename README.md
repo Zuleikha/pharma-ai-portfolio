@@ -51,6 +51,7 @@ pharma-ai-portfolio/
 ├─ output/
 │   └─ molecular_analysis_results.csv
 │
+├─ FUTURE_WORK.md                       # Detailed pipeline expansion roadmap
 ├─ LEARNING_PATH.md                     # Tech to Pharma AI learning journey
 └─ README.md
 ```
@@ -210,16 +211,30 @@ Ideal for showcasing structural biology + drug design skills.
 
 # 🚀 Roadmap (Next Steps)
 
-1. **Binding pocket detection**  
-   fpocket / PyMol / custom geometry clustering  
-2. **Docking pipeline**  
-   AutoDock Vina / DiffDock  
-3. **Ligand preparation**  
-   RDKit protonation + minimization  
-4. **Scoring and ranking**  
-   Basic scoring + ML-based scoring  
-5. **Integration**  
-   Add results to portfolio pages + visuals  
+**[View Detailed Pipeline Expansion Plan →](FUTURE_WORK.md)**
+
+**Upcoming phases to complete the full drug discovery pipeline:**
+
+1. **Pose Analysis & Validation**  
+   Interaction fingerprinting, RMSD clustering, redocking validation
+   
+2. **ADMET Filtering**  
+   Lipinski/Veber rules, PAINS filtering, synthetic accessibility, drug-likeness
+
+3. **Molecular Dynamics (Optional)**  
+   Binding stability validation, H-bond analysis, MM/PBSA scoring
+
+4. **Hit Optimization**  
+   Fragment growing, scaffold hopping, SAR analysis, metabolic stability
+
+5. **Final Selection & Ranking**  
+   Integrated scoring, consensus ranking, lead identification
+
+6. **Portfolio Packaging**  
+   Pipeline visualization, results documentation, lessons learned
+
+**Timeline:** 7-10 weeks for complete implementation  
+**Current Focus:** Phase 7 - Pose Analysis & Validation  
 
 ---
 
