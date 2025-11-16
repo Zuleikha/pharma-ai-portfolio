@@ -2,6 +2,18 @@
 A modular, expanding portfolio demonstrating practical skills in **computational chemistry**, **structural bioinformatics**, and **AI-driven drug discovery**.  
 Each section is a clean, self-contained workflow.
 
+## 📚 Learning Journey: Tech to Pharma AI
+
+This portfolio documents my transition from software engineering to pharmaceutical AI/ML, backed by structured learning in drug discovery fundamentals, computational chemistry, and AI applications in pharma.
+
+**[View Complete Learning Plan →](LEARNING_PLAN.md)**
+
+**Key Areas Covered:**
+- Drug discovery process (target ID → clinical trials)
+- Computational chemistry tools (RDKit, AlphaFold, AutoDock)
+- ADMET prediction & molecular modeling
+- AI/ML for drug design and property prediction
+
 ---
 
 # 📁 Project Structure
