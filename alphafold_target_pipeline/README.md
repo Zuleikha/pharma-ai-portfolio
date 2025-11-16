@@ -29,12 +29,13 @@ alphafold_target_pipeline/
 │       ├── DHFR_rank5.pdb
 │
 └── images/
-    ├── dhfr_cartoon_secondary_structure.png
-    ├── dhfr_cartoon_greyscale.png
-    ├── dhfr_all_atom_sticks.png
-    ├── dhfr_active_site_highlighted.png
-    ├── dhfr_surface_exposed_residues.png
-    └── dhfr_active_site_surface_view.png
+    └── structures/
+        ├── dhfr_cartoon_secondary_structure.png
+        ├── dhfr_cartoon_greyscale.png
+        ├── dhfr_all_atom_sticks.png
+        ├── dhfr_active_site_highlighted.png
+        ├── dhfr_surface_exposed_residues.png
+        └── dhfr_active_site_surface_view.png
 ```
 
 ---
@@ -63,29 +64,29 @@ Outputs include:
 - 🔴 Active-site residue highlights  
 - ☁️ Surface representations  
 
-Images saved inside **images/**.
+Images saved inside **images/structures/**.
 
 ---
 
 # 🖼️ Image Gallery
 
 ## 🌈 Rainbow Colored Secondary Structure
-![DHFR Cartoon Secondary Structure](dhfr_cartoon_secondary_structure.png)
+![DHFR Cartoon Secondary Structure](images/structures/dhfr_cartoon_secondary_structure.png)
 
 ## ⚪ Greyscale Cartoon
-![DHFR Cartoon Greyscale](dhfr_cartoon_greyscale.png)
+![DHFR Cartoon Greyscale](images/structures/dhfr_cartoon_greyscale.png)
 
 ## 🧱 Full Atom Stick Representation
-![DHFR All Atom Sticks](dhfr_all_atom_sticks.png)
+![DHFR All Atom Sticks](images/structures/dhfr_all_atom_sticks.png)
 
 ## 🔴 Active Site Highlighted
-![DHFR Active Site Highlighted](dhfr_active_site_highlighted.png)
+![DHFR Active Site Highlighted](images/structures/dhfr_active_site_highlighted.png)
 
 ## ☁️ Surface with Exposed Residues
-![DHFR Surface Exposed Residues](dhfr_surface_exposed_residues.png)
+![DHFR Surface Exposed Residues](images/structures/dhfr_surface_exposed_residues.png)
 
 ## 🔵 Active Site Surface View
-![DHFR Active Site Surface View](dhfr_active_site_surface_view.png)
+![DHFR Active Site Surface View](images/structures/dhfr_active_site_surface_view.png)
 
 ---
 
