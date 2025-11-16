@@ -31,7 +31,10 @@ pharma-ai-portfolio/
 │   ├─ molecular_docking_prep.py
 │   ├─ molecular_property_analyzer.py
 │
-├─ images/                              # Figures for documentation
+├─ images/                              # Molecular structure figures
+│   ├─ aspirin.png
+│   ├─ best_2d.png
+│   └─ three_drugs.png
 │
 ├─ output/
 │   └─ molecular_analysis_results.csv
@@ -100,6 +103,23 @@ Prepares molecules for docking:
 
 Notebook → `notebooks/Molecular Docking Preparation.ipynb`  
 Script → `src/molecular_docking_prep.py`
+
+---
+
+# 🧪 Molecular Structure Examples
+
+## Drug Molecule Visualizations
+
+![Aspirin Structure](images/aspirin.png)  
+**Aspirin (Acetylsalicylic Acid)** - Common NSAID showing ester and carboxylic acid functional groups
+
+![Caffeine Conformer](images/best_2d.png)  
+**Caffeine Lowest Energy Conformer** - RDKit conformer analysis (E=-69.03 kcal/mol)
+
+![Three Common Drugs](images/three_drugs.png)  
+**Comparative Drug Structures** - Aspirin, Caffeine, and Ibuprofen side-by-side
+
+These visualizations demonstrate 2D molecular rendering and conformer analysis using RDKit, core tools in computational drug discovery.
 
 ---
 
