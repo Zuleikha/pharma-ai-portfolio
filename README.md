@@ -51,6 +51,7 @@ pharma-ai-portfolio/
 ├─ output/
 │   └─ molecular_analysis_results.csv
 │
+├─ LEARNING_PATH.md                     # Tech to Pharma AI learning journey
 └─ README.md
 ```
 
