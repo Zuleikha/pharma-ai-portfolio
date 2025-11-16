@@ -6,7 +6,7 @@ Each section is a clean, self-contained workflow.
 
 This portfolio documents my transition from software engineering to pharmaceutical AI/ML, backed by structured learning in drug discovery fundamentals, computational chemistry, and AI applications in pharma.
 
-**[View Complete Learning Plan →](LEARNING_PLAN.md)**
+**[View Complete Learning Path →](LEARNING_PATH.md)**
 
 **Key Areas Covered:**
 - Drug discovery process (target ID → clinical trials)
