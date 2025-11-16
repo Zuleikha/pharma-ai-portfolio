@@ -29,13 +29,12 @@ alphafold_target_pipeline/
 │       ├── DHFR_rank5.pdb
 │
 └── images/
-    └── structures/
-        ├── dhfr_colored_cartoon.png
-        ├── dhfr_cartoon_greyscale.png
-        ├── dhfr_sticks_full_structure.png
-        ├── dhfr_active_site_residues.png
-        ├── dhfr_cysteines_highlighted.png
-        └── dhfr_active_site_surface.png
+    ├── dhfr_cartoon_secondary_structure.png
+    ├── dhfr_cartoon_greyscale.png
+    ├── dhfr_all_atom_sticks.png
+    ├── dhfr_active_site_highlighted.png
+    ├── dhfr_surface_exposed_residues.png
+    └── dhfr_active_site_surface_view.png
 ```
 
 ---
@@ -62,32 +61,31 @@ Outputs include:
 - ⚪ Greyscale cartoon  
 - 🧱 Full-atom stick view  
 - 🔴 Active-site residue highlights  
-- 🟡 Cysteine mapping  
-- ☁️ Surface + active-site overlay  
+- ☁️ Surface representations  
 
-Images saved inside **images/structures/**.
+Images saved inside **images/**.
 
 ---
 
 # 🖼️ Image Gallery
 
-## 🟦 DHFR Rainbow Cartoon
-![DHFR Colored Cartoon](images/structures/dhfr_colored_cartoon.png)
+## 🌈 Rainbow Colored Secondary Structure
+![DHFR Cartoon Secondary Structure](dhfr_cartoon_secondary_structure.png)
 
 ## ⚪ Greyscale Cartoon
-![DHFR Greyscale Cartoon](images/structures/dhfr_cartoon_greyscale.png)
+![DHFR Cartoon Greyscale](dhfr_cartoon_greyscale.png)
 
 ## 🧱 Full Atom Stick Representation
-![DHFR Sticks Full Structure](images/structures/dhfr_sticks_full_structure.png)
+![DHFR All Atom Sticks](dhfr_all_atom_sticks.png)
 
-## 🔴 Active Site Highlight (Red)
-![DHFR Active Site Residues](images/structures/dhfr_active_site_residues.png)
+## 🔴 Active Site Highlighted
+![DHFR Active Site Highlighted](dhfr_active_site_highlighted.png)
 
-## 🟡 Cysteine Residue Highlight (Yellow)
-![DHFR Cysteines](images/structures/dhfr_cysteines_highlighted.png)
+## ☁️ Surface with Exposed Residues
+![DHFR Surface Exposed Residues](dhfr_surface_exposed_residues.png)
 
-## ☁️ Surface + Active Site Overlay
-![DHFR Active Site Surface](images/structures/dhfr_active_site_surface.png)
+## 🔵 Active Site Surface View
+![DHFR Active Site Surface View](dhfr_active_site_surface_view.png)
 
 ---
 
@@ -118,5 +116,3 @@ This pipeline supports upcoming project phases:
 4. **End-to-end portfolio integration**
 
 ---
-
-
