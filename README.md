@@ -239,7 +239,7 @@ Ideal for showcasing structural biology + drug design skills.
 ---
 
 # 🤝 Contributing
-Pull requests welcome — this portfolio evolves over time.
+Pull requests welcome - this portfolio evolves over time.
 
 ---
 
