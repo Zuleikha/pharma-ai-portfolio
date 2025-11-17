@@ -1,0 +1,7 @@
+rdkit
+pandas
+numpy
+matplotlib
+py3Dmol
+biopython
+scikit-learn
