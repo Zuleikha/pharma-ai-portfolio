@@ -1,7 +1,8 @@
-rdkit
+rdkit-pypi
 pandas
 numpy
 matplotlib
 py3Dmol
 biopython
 scikit-learn
+openbabel

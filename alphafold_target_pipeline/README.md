@@ -1,16 +1,18 @@
-# ✅ AlphaFold Target Pipeline — README
-
-This module contains the complete pipeline used to:
+# 🧬 AlphaFold Target Pipeline — DHFR  
+A complete, portfolio‑ready workflow showing how to:
 
 ✔ Run **AlphaFold/ColabFold**  
-✔ Predict protein structure (DHFR in this case)  
-✔ Visualize key structural features  
-✔ Generate images for analysis & portfolio use  
+✔ Generate & analyze protein structures  
+✔ Create publication‑quality images  
+✔ Prepare ligands  
+✔ Perform docking  
+✔ Visualize binding interactions  
 
-It is part of the **pharma-ai-portfolio** project.
+---
 
-## 📁 Folder Structure
-```
+# 📁 Folder Structure
+
+```text
 alphafold_target_pipeline/
 │
 ├── notebooks/
@@ -18,102 +20,134 @@ alphafold_target_pipeline/
 │   └── 02_structure_analysis.ipynb
 │
 ├── data/
-│   └── protein_sequence.fasta
+│   ├── protein_sequence.fasta
+│   ├── ligands/
+│   └── protein/
+│
+├── images/
+│   ├── protein_ligand_docking.png
+│   └── structures/
+│       ├── docking/
+│       ├── interactions/
+│       └── protein/
 │
 ├── output/
-│   └── structures/
-│       ├── DHFR_rank1.pdb
-│       ├── DHFR_rank2.pdb
-│       ├── DHFR_rank3.pdb
-│       ├── DHFR_rank4.pdb
-│       ├── DHFR_rank5.pdb
+│   ├── structures/
+│   ├── docking/
+│   └── vina/
 │
-└── images/
-    └── structures/
-        ├── dhfr_cartoon_secondary_structure.png
-        ├── dhfr_cartoon_greyscale.png
-        ├── dhfr_all_atom_sticks.png
-        ├── dhfr_active_site_highlighted.png
-        ├── dhfr_surface_exposed_residues.png
-        └── dhfr_active_site_surface_view.png
+└── src/
 ```
 
 ---
 
-# 📓 Notebooks Overview
+# 📓 Notebook Workflows
 
-## 1️⃣ 01_run_alphafold_colab.ipynb
-Runs AlphaFold using **ColabFold**, generating:
+## **1️⃣ 01_run_alphafold_colab.ipynb**
+Runs **ColabFold** to generate:
 
-- Multiple PDB models  
-- MSA alignment via MMseqs2  
-- Ranked models saved to `output/structures/`
-
-This notebook is designed to be run in **Google Colab** for GPU acceleration.
-
----
-
-## 2️⃣ 02_structure_analysis.ipynb
-Loads AlphaFold-generated structures and creates publication-ready visualizations using **py3Dmol**.
-
-Outputs include:
-
-- 🌈 Rainbow-colored cartoon  
-- ⚪ Greyscale cartoon  
-- 🧱 Full-atom stick view  
-- 🔴 Active-site residue highlights  
-- ☁️ Surface representations  
-
-Images saved inside **images/structures/**.
+- 5 ranked PDB models  
+- MSA via MMseqs2  
+- PAE & pLDDT confidence plots  
+- All saved to:  
+  `output/structures/`
 
 ---
 
-# 🖼️ Image Gallery
+## **2️⃣ 02_structure_analysis.ipynb**
+Visualizes AlphaFold output using **py3Dmol + PyMOL**:
 
-## 🌈 Rainbow Colored Secondary Structure
-![DHFR Cartoon Secondary Structure](images/structures/dhfr_cartoon_secondary_structure.png)
+Produces:
 
-## ⚪ Greyscale Cartoon
-![DHFR Cartoon Greyscale](images/structures/dhfr_cartoon_greyscale.png)
+- Rainbow cartoon  
+- Greyscale cartoon  
+- Full‑atom sticks  
+- Active‑site residues  
+- Surface views  
 
-## 🧱 Full Atom Stick Representation
-![DHFR All Atom Sticks](images/structures/dhfr_all_atom_sticks.png)
+Saved to:  
+`images/structures/protein/`
 
-## 🔴 Active Site Highlighted
-![DHFR Active Site Highlighted](images/structures/dhfr_active_site_highlighted.png)
+---
 
-## ☁️ Surface with Exposed Residues
-![DHFR Surface Exposed Residues](images/structures/dhfr_surface_exposed_residues.png)
+# 🖼️ Protein Structure Gallery
 
-## 🔵 Active Site Surface View
-![DHFR Active Site Surface View](images/structures/dhfr_active_site_surface_view.png)
+![SS](images/structures/protein/dhfr_cartoon_secondary_structure.png)
+![Gray](images/structures/protein/dhfr_cartoon_greyscale.png)
+![Sticks](images/structures/protein/dhfr_all_atom_sticks.png)
+![Active](images/structures/protein/dhfr_active_site_highlighted.png)
+![Surface](images/structures/protein/dhfr_surface_exposed_residues.png)
+![Surface2](images/structures/protein/dhfr_active_site_surface_view.png)
+
+---
+
+# 🔬 Docking Workflow
+
+Ligands prepared in:
+
+```
+data/ligands/
+```
+
+Protein PDB & PDBQT:
+
+```
+data/protein/
+```
+
+Docking results:
+
+```
+output/docking/
+output/vina/
+images/structures/docking/
+images/structures/interactions/
+```
+
+Interaction diagrams:
+
+![Docking](images/structures/docking/dhfr_trimethoprim_docking.png)
+![Docking2](images/structures/docking/dhfr_pyrimethamine_docking.png)
+![Int](images/structures/interactions/dhfr_trimethoprim_interaction.png)
+![Int2](images/structures/interactions/dhfr_pyrimethamine_interactions.png)
 
 ---
 
 # 🧬 DHFR Summary
 
-**Dihydrofolate Reductase (DHFR)** is a key enzyme in:
+DHFR plays a central role in:
 
 - DNA synthesis  
 - Folate metabolism  
-- Cell replication  
+- Cell growth  
 
-It is a major drug target for:
+Targeted by:
 
-- 🦠 antibiotics (e.g., trimethoprim)  
-- 🎗️ cancer therapy (e.g., methotrexate)  
+- Methotrexate  
+- Trimethoprim  
+- Pyrimethamine  
 
-This makes it a perfect molecule for your drug-design portfolio.
+This makes it an excellent molecule for demonstrating structure‑guided drug design.
+
+---
+
+# 🚀 Future Extensions
+
+- Binding pocket mapping (fpocket / PyMOL)  
+- Fragment elaboration  
+- Interaction fingerprinting  
+- Pose scoring  
+- ADMET predictions  
+- ML‑guided ligand ranking  
 
 ---
 
-# 🚀 Next Steps
+# 🧰 Notes
 
-This pipeline supports upcoming project phases:
+This pipeline intentionally mirrors workflows used in:
 
-1. **Binding pocket detection** (fpocket or PyMol)  
-2. **Docking setup** (AutoDock Vina or DiffDock)  
-3. **Ligand preparation & scoring**  
-4. **End-to-end portfolio integration**
+- Academic computational chemistry labs  
+- Pharma / biotech structural biology teams  
+- Structure‑based drug‑design pipelines  
 
----
+Making it ideal for portfolio, interview, and learning use.

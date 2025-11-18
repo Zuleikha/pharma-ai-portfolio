@@ -1,249 +1,172 @@
-# 🧬 Pharma-AI Portfolio  
-A modular, expanding portfolio demonstrating practical skills in **computational chemistry**, **structural bioinformatics**, and **AI-driven drug discovery**.  
-Each section is a clean, self-contained workflow.
-
-## 📚 Learning Journey: Tech to Pharma AI
-
-This portfolio documents my transition from software engineering to pharmaceutical AI/ML, backed by structured learning in drug discovery fundamentals, computational chemistry, and AI applications in pharma.
-
-**[View Complete Learning Path →](LEARNING_PATH.md)**
-
-**Key Areas Covered:**
-- Drug discovery process (target ID → clinical trials)
-- Computational chemistry tools (RDKit, AlphaFold, AutoDock)
-- ADMET prediction & molecular modeling
-- AI/ML for drug design and property prediction
+# 🧬 Pharma‑AI Portfolio  
+A polished, professional portfolio showcasing practical skills across **computational chemistry**, **structural bioinformatics**, **AlphaFold**, **docking**, **binding‑site analysis**, and **AI‑driven drug discovery**.  
+Built end‑to‑end as a demonstration of real‑world drug discovery workflows.
 
 ---
 
-# 📁 Project Structure
+# 🌟 Overview
+
+This portfolio documents a hands‑on journey from software engineering into **computational drug discovery** and **pharma AI/ML**, combining:
+
+- Protein structure prediction (AlphaFold / ColabFold)  
+- Structural analysis & visualization  
+- Ligand preparation & docking (RDKit + AutoDock Vina)  
+- Fragment‑based design  
+- Molecular property analysis  
+- Data‑driven decision making  
+- Future extensions: pocket detection, scoring, ADMET, and ML models  
+
+This repository is both a **learning artifact** and a **working toolkit** for real drug‑discovery pipelines.
+
+---
+
+# 🗂️ Project Structure (Updated)
 
 ```text
 pharma-ai-portfolio/
 │
-├─ alphafold_target_pipeline/           # AlphaFold + DHFR structure & docking pipeline
+├─ alphafold_target_pipeline/      # AlphaFold → analysis → docking workflow (DHFR)
 │   ├─ data/
-│   │   ├─ protein_sequence.fasta
-│   │   ├─ ligands/                     # RDKit-generated ligands + PDBQT files
-│   │   └─ protein/                     # DHFR PDB + PDBQT
 │   ├─ notebooks/
-│   │   ├─ 01_run_alphafold_colab.ipynb
-│   │   └─ 02_structure_analysis.ipynb
 │   ├─ images/
-│   │   ├─ protein_ligand_docking.png   # Overview figure
-│   │   └─ structures/                  # DHFR structural & docking renders (PNG)
 │   ├─ output/
-│   │   ├─ docking/                     # AutoDock Vina poses (PDBQT)
-│   │   ├─ vina/                        # Legacy Vina tests
-│   │   └─ structures/                  # AlphaFold PDBs + exported images
-│   └─ src/                             # (future) pocket detection, scoring, utilities
+│   └─ src/
 │
-├─ notebooks/                           # Small interactive workflows
-│   ├─ fragment_based_drug_design.ipynb
-│   ├─ molecular_property_analysis.ipynb
-│   ├─ drug_analysis_demo.ipynb
-│   ├─ Molecular Docking Preparation.ipynb
+├─ notebooks/                      # Interactive cheminformatics & structural workflows
 │
-├─ src/                                 # Core reusable python modules
-│   ├─ fragment_based_drug_design.py
-│   ├─ molecular_docking_prep.py
-│   ├─ molecular_property_analyzer.py
+├─ src/                            # Core reusable Python modules (RDKit, docking, FBDD)
 │
-├─ archive/
-│   └─ rdkit_basics/                    # Early RDKit experiments and scripts
+├─ images/                         # Portfolio figures (molecules, structures, conformers)
 │
-├─ images/                              # General molecular structure figures
-│   ├─ aspirin.png
-│   ├─ best_2d.png
-│   └─ three_drugs.png
+├─ output/                         # Output tables (e.g., molecular properties)
 │
-├─ output/
-│   └─ molecular_analysis_results.csv
-│
-├─ FUTURE_WORK.md                       # Detailed pipeline expansion roadmap
-├─ LEARNING_PATH.md                     # Tech to Pharma AI learning journey
-└─ README.md
+├─ LEARNING_PATH.md                # My structured journey into pharma/AI
+├─ FUTURE_WORK.md                  # Detailed project roadmap
+└─ README.md                       # <- You are here
 ```
 
 ---
 
-# 🧩 Included Pipelines
+# 🧩 Included Pipelines & Workflows
 
-## **1️⃣ AlphaFold Target Pipeline (DHFR)**
+## **1️⃣ AlphaFold Target Pipeline (DHFR)**  
+A complete structural‑biology workflow:
 
-A full structural-biology mini-workflow:
+- Input FASTA → AlphaFold structure prediction  
+- Structural visualization (py3Dmol + PyMOL)  
+- Active site characterization  
+- Ligand prep (RDKit → PDBQT)  
+- Docking with AutoDock Vina  
+- Interaction & binding pose analysis  
 
-✔ Input FASTA  
-✔ Predict 3D structure via ColabFold/AlphaFold  
-✔ Visualize via `py3Dmol` and PyMOL  
-✔ Highlight the active site & exposed residues  
-✔ Prepare protein + ligands for docking  
-✔ Run AutoDock Vina and export portfolio-ready figures  
-
-**Outputs:**  
-- Structures → `alphafold_target_pipeline/output/structures/`  
-- Docking poses → `alphafold_target_pipeline/output/docking/`  
-- Images → `alphafold_target_pipeline/images/structures/`
+**Full documentation →** `alphafold_target_pipeline/README.md`
 
 ---
 
-## **2️⃣ Fragment-Based Drug Design**
+## **2️⃣ Fragment‑Based Drug Design (FBDD)**
 
 Explores:
 
 - Fragmentation  
 - Recombination  
-- Scoring  
-- Filtering  
+- Scoring & filtering  
+- Conformer generation  
 - Visualization  
 
-Notebook → `notebooks/fragment_based_drug_design.ipynb`  
-Core script → `src/fragment_based_drug_design.py`
+Notebook → `notebooks/fragment_based_drug_design.ipynb`
 
 ---
 
 ## **3️⃣ Molecular Property Analysis**
 
-Computes RDKit-based descriptors:
+Computes key drug‑likeness descriptors:
 
-✔ LogP  
-✔ Molecular weight  
-✔ HBD / HBA  
-✔ Polar surface area  
-✔ Rule-of-5 metrics  
+- LogP / MW / TPSA  
+- HBD / HBA  
+- Rule‑of‑5 flags  
+- Molecular visualization  
 
-Notebook → `notebooks/molecular_property_analysis.ipynb`  
-Output → `output/molecular_analysis_results.csv`
+Notebook → `notebooks/molecular_property_analysis.ipynb`
 
 ---
 
 ## **4️⃣ Docking Preparation**
 
-Prepares molecules for docking:
+Automates:
 
-✔ Protonation  
-✔ Sanitization  
-✔ Geometry optimization  
-✔ SDF / MOL / PDBQT export  
+- Molecule sanitization  
+- Geometry optimization  
+- Protonation  
+- Conversion to PDBQT  
 
-Notebook → `notebooks/Molecular Docking Preparation.ipynb`  
-Script → `src/molecular_docking_prep.py`
-
----
-
-# 🧪 Molecular Structure Examples
-
-## Drug Molecule Visualizations
-
-![Aspirin Structure](images/aspirin.png)  
-**Aspirin (Acetylsalicylic Acid)** — common NSAID showing ester and carboxylic acid functional groups.
-
-![Caffeine Conformer](images/best_2d.png)  
-**Caffeine Lowest Energy Conformer** — RDKit conformer analysis.
-
-![Three Common Drugs](images/three_drugs.png)  
-**Comparative Drug Structures** — Aspirin, Caffeine, and Ibuprofen side-by-side.
-
-These visualizations demonstrate 2D molecular rendering and conformer analysis using RDKit, core tools in computational drug discovery.
+Notebook → `notebooks/Molecular Docking Preparation.ipynb`
 
 ---
 
-# 🖼️ Structural Images (DHFR)
+# 🖼️ Highlight Images
 
-All DHFR structural and docking PNGs are stored here:
-
-```text
-alphafold_target_pipeline/images/structures/
-```
-
-Current set includes:
-
-- `dhfr_cartoon_secondary_structure.png`  
-- `dhfr_cartoon_greyscale.png`  
-- `dhfr_all_atom_sticks.png`  
-- `dhfr_active_site_highlighted.png`  
-- `dhfr_surface_exposed_residues.png`  
-- `dhfr_active_site_surface_view.png`  
-- `dhfr_trimethoprim_docking.png`  
-- `dhfr_pyrimethamine_docking.png`  
-
-These images were generated from the AlphaFold DHFR model using PyMOL and are used throughout the portfolio to illustrate structure, active-site context, and ligand binding.
+## Molecular Examples
+![Aspirin](images/aspirin.png)
+![Caffeine](images/best_2d.png)
+![Three Drugs](images/three_drugs.png)
 
 ---
 
-# 🧬 About DHFR (Dihydrofolate Reductase)
+# 🖼️ DHFR Structural Gallery
 
-DHFR is essential for:
+These images were generated using your AlphaFold model + PyMOL:
+
+![DHFR SS](alphafold_target_pipeline/images/structures/protein/dhfr_cartoon_secondary_structure.png)
+![DHFR Gray](alphafold_target_pipeline/images/structures/protein/dhfr_cartoon_greyscale.png)
+![DHFR Sticks](alphafold_target_pipeline/images/structures/protein/dhfr_all_atom_sticks.png)
+![DHFR Active Site](alphafold_target_pipeline/images/structures/protein/dhfr_active_site_highlighted.png)
+![DHFR Surface](alphafold_target_pipeline/images/structures/protein/dhfr_surface_exposed_residues.png)
+![DHFR Surface 2](alphafold_target_pipeline/images/structures/protein/dhfr_active_site_surface_view.png)
+
+---
+
+# 🧬 Why DHFR?
+
+**Dihydrofolate Reductase** is a clinically validated target involved in:
 
 - DNA synthesis  
+- Cell proliferation  
 - Folate metabolism  
-- Cell growth  
 
-It is an important drug target for:
+Drug classes targeting DHFR include:
 
-- Cancer therapy (e.g., methotrexate)  
-- Antimicrobials (e.g., trimethoprim, pyrimethamine)  
+- Antibiotics (trimethoprim, pyrimethamine)  
+- Anticancer agents (methotrexate)
 
-This makes DHFR an ideal example for showcasing structural biology and drug-design skills in this portfolio.
+This makes DHFR ideal for showcasing structural modeling, docking, and ligand–protein interaction analysis.
 
 ---
 
-# 🧱 Installation
+# 🚀 Installation
 
 ```bash
 git clone https://github.com/yourusername/pharma-ai-portfolio.git
 cd pharma-ai-portfolio
-```
-
-Create a virtual environment:
-
-```bash
-python -m venv venv
-# Windows (Git Bash / PowerShell)
-source venv/Scripts/activate
-```
-
-Install required libraries:
-
-```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-# 🧪 Dependencies
+# 📈 Roadmap
 
-- RDKit  
-- NumPy / SciPy  
-- Pandas  
-- Matplotlib  
-- py3Dmol  
-- Biopython  
-- scikit-learn  
+See **FUTURE_WORK.md** for the complete multi‑phase roadmap, including:
 
-*(AlphaFold itself is run externally in Colab/ColabFold; docking uses a local AutoDock Vina installation.)*
-
----
-
-# 🚀 Roadmap (Next Steps)
-
-**[View Detailed Pipeline Expansion Plan →](FUTURE_WORK.md)**
-
-Planned next phases to complete the full discovery workflow:
-
-1. Pose analysis & validation (RMSD clustering, interaction fingerprints)  
-2. ADMET filtering and property-based triage  
-3. Optional molecular dynamics for binding stability  
-4. Hit optimization and fragment growing  
-5. Final ranking and lead selection  
-6. Portfolio packaging and write-up
+- Binding pocket detection (fpocket, ML models)  
+- Pose scoring & clustering  
+- Fragment growing & lead optimization  
+- ADMET ML pipeline  
+- End‑to‑end hit discovery workflow  
 
 ---
 
 # 🤝 Contributing
 
-This is a personal learning portfolio, but suggestions and ideas are welcome.  
-Pull requests focusing on documentation, testing, or new example workflows are appreciated.
+Suggestions and contributions are welcome, especially improvements to documentation, workflows, and visualizations.
 
 ---
 
