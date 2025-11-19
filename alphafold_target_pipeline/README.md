@@ -69,12 +69,27 @@ Saved in `images/structures/protein/`.
 
 # Protein Structure Gallery
 
-![SS](images/structures/protein/dhfr_cartoon_secondary_structure.png)
-![Gray](images/structures/protein/dhfr_cartoon_greyscale.png)
-![Sticks](images/structures/protein/dhfr_all_atom_sticks.png)
-![Active](images/structures/protein/dhfr_active_site_highlighted.png)
-![Surface](images/structures/protein/dhfr_surface_exposed_residues.png)
-![Surface2](images/structures/protein/dhfr_active_site_surface_view.png)
+![SS](images/structures/protein/dhfr_cartoon_secondary_structure.png)  
+![Gray](images/structures/protein/dhfr_cartoon_greyscale.png)  
+![Sticks](images/structures/protein/dhfr_all_atom_sticks.png)  
+![Active](images/structures/protein/dhfr_active_site_highlighted.png)  
+![Surface](images/structures/protein/dhfr_surface_exposed_residues.png)  
+![Surface2](images/structures/protein/dhfr_active_site_surface_view.png)  
+
+**Clean Active Site (PyMOL script‑generated)**  
+![CleanActiveSite](images/structures/protein/dhfr_active_site_clean.png)
+
+## FPocket Pocket Visualizations
+
+Pocket 14 — Clean surface + pocket atoms  
+![Pocket Clean](images/structures/protein/dhfr_fpocket_clean.png)
+
+Pocket 14 — Pocket overlaid with ligand  
+![Pocket Ligand](images/structures/protein/dhfr_fpocket_ligand_overlay.png)
+
+Pocket 14 — Annotated / labeled visualization  
+![Pocket Labeled](images/structures/protein/dhfr_fpocket_labeled.png)
+
 
 ---
 
@@ -103,9 +118,9 @@ images/structures/interactions/
 
 Docking and interaction images:
 
-![Docking](images/structures/docking/dhfr_trimethoprim_docking.png)
-![Docking2](images/structures/docking/dhfr_pyrimethamine_docking.png)
-![Int](images/structures/interactions/dhfr_trimethoprim_interaction.png)
+![Docking](images/structures/docking/dhfr_trimethoprim_docking.png)  
+![Docking2](images/structures/docking/dhfr_pyrimethamine_docking.png)  
+![Int](images/structures/interactions/dhfr_trimethoprim_interaction.png)  
 ![Int2](images/structures/interactions/dhfr_pyrimethamine_interactions.png)
 
 ---
@@ -118,13 +133,13 @@ DHFR is central to:
 - Folate metabolism  
 - Cellular proliferation  
 
-Drug classes targeting DHFR include:
+Targeted by:
 
 - Methotrexate  
 - Trimethoprim  
 - Pyrimethamine  
 
-A strong example target for structure-guided drug design.
+A strong example target for structure‑guided drug design.
 
 ---
 
@@ -141,4 +156,4 @@ A strong example target for structure-guided drug design.
 
 # Notes
 
-This pipeline mirrors workflows used in academic computational chemistry and industry structural biology, making it suitable for portfolio and learning use.
+This pipeline mirrors real workflows used in academic computational chemistry and industry structural biology.
