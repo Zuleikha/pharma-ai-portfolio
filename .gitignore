@@ -1,18 +1,92 @@
-# Virtual env
+# -----------------------------
+# Python / Environment
+# -----------------------------
 venv/
+env/
+.venv/
+ENV/
 
-# Python cache / compiled files
+# Byte-compiled / cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.pdb
+*.pkl
+*.sqlite
 
+# Conda environment artifacts
+conda-meta/
+*.conda
+*.yaml~
+
+# Caches
+*.cache/
+.cache/
+
+# -----------------------------
 # Jupyter
+# -----------------------------
 .ipynb_checkpoints/
+*.ipynb_checkpoints
 
-# OS files
+# -----------------------------
+# OS / Editor Files
+# -----------------------------
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+*.tmp
 
-# Optional: ignore outputs if they are generated
-# output/
+# VSCode
+.vscode/
+.history/
+
+# PyCharm
+.idea/
+
+# -----------------------------
+# Logs
+# -----------------------------
+*.log
+logs/
+output.log
+
+# -----------------------------
+# AlphaFold / Docking / Modeling Artifacts
+# -----------------------------
+
+# AutoDock Vina outputs (optional – keep if needed)
+*.pdbqt
+*.dlg
+
+# MSA temp data (ColabFold & AlphaFold)
+msa/
+*.a3m
+*.sto
+
+# PAE JSON from ColabFold (optional)
+*.json
+*.npz
+
+# LARGE MODELS (optional)
+# Uncomment if you store heavy AF2 models locally
+# models/
+# params/
+
+# -----------------------------
+# Portfolio Generated Images
+# -----------------------------
+# Ignore temporary rendering outputs
+*.png~
+*.jpg~
+render_cache/
+temp_images/
+
+# -----------------------------
+# Build / Distribution
+# -----------------------------
+build/
+dist/
+*.egg-info/

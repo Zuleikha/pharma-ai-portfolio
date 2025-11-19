@@ -1,16 +1,17 @@
-# 🧬 AlphaFold Target Pipeline — DHFR  
-A complete, portfolio‑ready workflow showing how to:
+# AlphaFold Target Pipeline — DHFR
 
-✔ Run **AlphaFold/ColabFold**  
-✔ Generate & analyze protein structures  
-✔ Create publication‑quality images  
-✔ Prepare ligands  
-✔ Perform docking  
-✔ Visualize binding interactions  
+A complete workflow demonstrating:
+
+- Running AlphaFold/ColabFold  
+- Generating and analyzing protein structures  
+- Producing high‑quality structural images  
+- Preparing ligands  
+- Docking and pose evaluation  
+- Visualizing ligand–protein interactions  
 
 ---
 
-# 📁 Folder Structure
+# Folder Structure
 
 ```text
 alphafold_target_pipeline/
@@ -41,36 +42,32 @@ alphafold_target_pipeline/
 
 ---
 
-# 📓 Notebook Workflows
+# Notebook Workflows
 
-## **1️⃣ 01_run_alphafold_colab.ipynb**
-Runs **ColabFold** to generate:
+## 1. 01_run_alphafold_colab.ipynb  
+Runs ColabFold to generate:
 
-- 5 ranked PDB models  
-- MSA via MMseqs2  
-- PAE & pLDDT confidence plots  
-- All saved to:  
-  `output/structures/`
-
----
-
-## **2️⃣ 02_structure_analysis.ipynb**
-Visualizes AlphaFold output using **py3Dmol + PyMOL**:
-
-Produces:
-
-- Rainbow cartoon  
-- Greyscale cartoon  
-- Full‑atom sticks  
-- Active‑site residues  
-- Surface views  
-
-Saved to:  
-`images/structures/protein/`
+- Five ranked PDB models  
+- MMseqs2-based MSA  
+- PAE and pLDDT plots  
+- Outputs stored in `output/structures/`
 
 ---
 
-# 🖼️ Protein Structure Gallery
+## 2. 02_structure_analysis.ipynb  
+Visualization using py3Dmol and PyMOL, producing:
+
+- Cartoon representations  
+- Greyscale versions  
+- All‑atom stick models  
+- Active-site residue views  
+- Surface visualizations  
+
+Saved in `images/structures/protein/`.
+
+---
+
+# Protein Structure Gallery
 
 ![SS](images/structures/protein/dhfr_cartoon_secondary_structure.png)
 ![Gray](images/structures/protein/dhfr_cartoon_greyscale.png)
@@ -81,21 +78,21 @@ Saved to:
 
 ---
 
-# 🔬 Docking Workflow
+# Docking Workflow
 
-Ligands prepared in:
+Ligands:
 
 ```
 data/ligands/
 ```
 
-Protein PDB & PDBQT:
+Protein structures:
 
 ```
 data/protein/
 ```
 
-Docking results:
+Docking outputs:
 
 ```
 output/docking/
@@ -104,7 +101,7 @@ images/structures/docking/
 images/structures/interactions/
 ```
 
-Interaction diagrams:
+Docking and interaction images:
 
 ![Docking](images/structures/docking/dhfr_trimethoprim_docking.png)
 ![Docking2](images/structures/docking/dhfr_pyrimethamine_docking.png)
@@ -113,41 +110,35 @@ Interaction diagrams:
 
 ---
 
-# 🧬 DHFR Summary
+# DHFR Summary
 
-DHFR plays a central role in:
+DHFR is central to:
 
 - DNA synthesis  
 - Folate metabolism  
-- Cell growth  
+- Cellular proliferation  
 
-Targeted by:
+Drug classes targeting DHFR include:
 
 - Methotrexate  
 - Trimethoprim  
 - Pyrimethamine  
 
-This makes it an excellent molecule for demonstrating structure‑guided drug design.
+A strong example target for structure-guided drug design.
 
 ---
 
-# 🚀 Future Extensions
+# Future Extensions
 
-- Binding pocket mapping (fpocket / PyMOL)  
+- Pocket detection (fpocket, PyMOL)  
 - Fragment elaboration  
 - Interaction fingerprinting  
-- Pose scoring  
-- ADMET predictions  
-- ML‑guided ligand ranking  
+- Pose scoring and clustering  
+- ADMET prediction  
+- ML-guided ligand prioritization  
 
 ---
 
-# 🧰 Notes
+# Notes
 
-This pipeline intentionally mirrors workflows used in:
-
-- Academic computational chemistry labs  
-- Pharma / biotech structural biology teams  
-- Structure‑based drug‑design pipelines  
-
-Making it ideal for portfolio, interview, and learning use.
+This pipeline mirrors workflows used in academic computational chemistry and industry structural biology, making it suitable for portfolio and learning use.

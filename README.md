@@ -1,26 +1,28 @@
-# 🧬 Pharma‑AI Portfolio  
-A polished, professional portfolio showcasing practical skills across **computational chemistry**, **structural bioinformatics**, **AlphaFold**, **docking**, **binding‑site analysis**, and **AI‑driven drug discovery**.  
-Built end‑to‑end as a demonstration of real‑world drug discovery workflows.
+# Pharma-AI Portfolio
+
+A polished portfolio demonstrating practical skills in computational chemistry, structural bioinformatics, AlphaFold modeling, ligand preparation, docking, binding-site analysis, and data-driven drug-discovery workflows.
+
+This repository documents a hands-on transition from software engineering into computational drug discovery and pharma AI/ML.
 
 ---
 
-# 🌟 Overview
+# Overview
 
-This portfolio documents a hands‑on journey from software engineering into **computational drug discovery** and **pharma AI/ML**, combining:
+This project combines:
 
-- Protein structure prediction (AlphaFold / ColabFold)  
-- Structural analysis & visualization  
-- Ligand preparation & docking (RDKit + AutoDock Vina)  
-- Fragment‑based design  
-- Molecular property analysis  
-- Data‑driven decision making  
-- Future extensions: pocket detection, scoring, ADMET, and ML models  
+- Protein structure prediction (AlphaFold / ColabFold)
+- Structural analysis and visualization
+- Ligand preparation and docking (RDKit + AutoDock Vina)
+- Fragment-based drug design
+- Molecular property analysis
+- Practical decision-making workflows for hit identification
+- Planned extensions: binding-site detection, ADMET, scoring, ML models
 
-This repository is both a **learning artifact** and a **working toolkit** for real drug‑discovery pipelines.
+It functions as both a learning record and a working toolkit.
 
 ---
 
-# 🗂️ Project Structure (Updated)
+# Project Structure
 
 ```text
 pharma-ai-portfolio/
@@ -32,89 +34,87 @@ pharma-ai-portfolio/
 │   ├─ output/
 │   └─ src/
 │
-├─ notebooks/                      # Interactive cheminformatics & structural workflows
+├─ notebooks/                      # Cheminformatics & structural analysis notebooks
 │
-├─ src/                            # Core reusable Python modules (RDKit, docking, FBDD)
+├─ src/                            # Reusable Python modules
 │
-├─ images/                         # Portfolio figures (molecules, structures, conformers)
+├─ images/                         # Molecule figures, conformers, visuals
 │
-├─ output/                         # Output tables (e.g., molecular properties)
+├─ output/                         # Output tables (e.g., descriptor results)
 │
-├─ LEARNING_PATH.md                # My structured journey into pharma/AI
-├─ FUTURE_WORK.md                  # Detailed project roadmap
-└─ README.md                       # <- You are here
+├─ LEARNING_PATH.md
+├─ FUTURE_WORK.md
+└─ README.md
 ```
 
 ---
 
-# 🧩 Included Pipelines & Workflows
+# Included Workflows
 
-## **1️⃣ AlphaFold Target Pipeline (DHFR)**  
-A complete structural‑biology workflow:
+## 1. AlphaFold Target Pipeline (DHFR)
+A full structural-biology and docking workflow:
 
-- Input FASTA → AlphaFold structure prediction  
-- Structural visualization (py3Dmol + PyMOL)  
-- Active site characterization  
-- Ligand prep (RDKit → PDBQT)  
-- Docking with AutoDock Vina  
-- Interaction & binding pose analysis  
+- FASTA → AlphaFold structure prediction
+- Model inspection & visualization
+- Active-site analysis
+- Ligand preparation and PDBQT conversion
+- Docking using AutoDock Vina
+- Binding pose and interaction examination
 
-**Full documentation →** `alphafold_target_pipeline/README.md`
-
----
-
-## **2️⃣ Fragment‑Based Drug Design (FBDD)**
-
-Explores:
-
-- Fragmentation  
-- Recombination  
-- Scoring & filtering  
-- Conformer generation  
-- Visualization  
-
-Notebook → `notebooks/fragment_based_drug_design.ipynb`
+Detailed docs: `alphafold_target_pipeline/README.md`
 
 ---
 
-## **3️⃣ Molecular Property Analysis**
+## 2. Fragment-Based Drug Design (FFDD)
 
-Computes key drug‑likeness descriptors:
+- Fragment generation
+- Recombination
+- Scoring and filtering
+- Conformer generation
+- Visualization
 
-- LogP / MW / TPSA  
-- HBD / HBA  
-- Rule‑of‑5 flags  
-- Molecular visualization  
-
-Notebook → `notebooks/molecular_property_analysis.ipynb`
+Notebook: `notebooks/fragment_based_drug_design.ipynb`
 
 ---
 
-## **4️⃣ Docking Preparation**
+## 3. Molecular Property Analysis
+
+Computes drug-likeness metrics:
+
+- LogP, MW, TPSA
+- HBD/HBA
+- Rule-of-5 parameters
+- Molecule visualization
+
+Notebook: `notebooks/molecular_property_analysis.ipynb`
+
+---
+
+## 4. Docking Preparation
 
 Automates:
 
-- Molecule sanitization  
-- Geometry optimization  
-- Protonation  
-- Conversion to PDBQT  
+- Molecule sanitization
+- Protonation
+- Geometry optimization
+- Export to PDBQT
 
-Notebook → `notebooks/Molecular Docking Preparation.ipynb`
+Notebook: `notebooks/Molecular Docking Preparation.ipynb`
 
 ---
 
-# 🖼️ Highlight Images
+# Example Images
 
-## Molecular Examples
-![Aspirin](images/aspirin.png)
-![Caffeine](images/best_2d.png)
+### Molecular Figures
+![Aspirin](images/aspirin.png)  
+![Caffeine](images/best_2d.png)  
 ![Three Drugs](images/three_drugs.png)
 
 ---
 
-# 🖼️ DHFR Structural Gallery
+# DHFR Structural Gallery
 
-These images were generated using your AlphaFold model + PyMOL:
+Images generated from AlphaFold + PyMOL:
 
 ![DHFR SS](alphafold_target_pipeline/images/structures/protein/dhfr_cartoon_secondary_structure.png)
 ![DHFR Gray](alphafold_target_pipeline/images/structures/protein/dhfr_cartoon_greyscale.png)
@@ -125,24 +125,24 @@ These images were generated using your AlphaFold model + PyMOL:
 
 ---
 
-# 🧬 Why DHFR?
+# Why DHFR?
 
-**Dihydrofolate Reductase** is a clinically validated target involved in:
+Dihydrofolate Reductase is a clinically validated target central to:
 
-- DNA synthesis  
-- Cell proliferation  
-- Folate metabolism  
+- DNA synthesis
+- Cell proliferation
+- Folate metabolism
 
-Drug classes targeting DHFR include:
+It is targeted by:
 
-- Antibiotics (trimethoprim, pyrimethamine)  
-- Anticancer agents (methotrexate)
+- Antibacterial agents (trimethoprim, pyrimethamine)
+- Anticancer therapeutics (methotrexate)
 
-This makes DHFR ideal for showcasing structural modeling, docking, and ligand–protein interaction analysis.
+This makes it a suitable system for demonstrating structural modeling, docking, and ligand–protein analysis.
 
 ---
 
-# 🚀 Installation
+# Installation
 
 ```bash
 git clone https://github.com/yourusername/pharma-ai-portfolio.git
@@ -150,26 +150,33 @@ cd pharma-ai-portfolio
 pip install -r requirements.txt
 ```
 
----
+(Optional) Conda environment:
 
-# 📈 Roadmap
-
-See **FUTURE_WORK.md** for the complete multi‑phase roadmap, including:
-
-- Binding pocket detection (fpocket, ML models)  
-- Pose scoring & clustering  
-- Fragment growing & lead optimization  
-- ADMET ML pipeline  
-- End‑to‑end hit discovery workflow  
+```bash
+conda env create -f environment.yml
+conda activate pharma-ai-env
+```
 
 ---
 
-# 🤝 Contributing
+# Roadmap
 
-Suggestions and contributions are welcome, especially improvements to documentation, workflows, and visualizations.
+See `FUTURE_WORK.md` for the full multi-phase roadmap, covering:
+
+- Binding pocket detection
+- Pose scoring and clustering
+- Fragment growing and optimization
+- ADMET filtering and prediction
+- Machine-learning expansion
 
 ---
 
-# 📄 License
+# Contributing
+
+Contributions are welcome, especially improvements to documentation, examples, or workflows.
+
+---
+
+# License
 
 MIT License.
