@@ -1,4 +1,4 @@
-# AlphaFold Target Pipeline — DHFR
+# AlphaFold Target Pipeline - DHFR
 
 A complete workflow demonstrating:
 
@@ -146,7 +146,14 @@ Docking and interaction images:
 ![Int](images/structures/interactions/dhfr_trimethoprim_interaction.png)  
 ![Int2](images/structures/interactions/dhfr_pyrimethamine_interactions.png)
 
----
+
+## Docking Results Summary
+
+| Ligand           | Known Use        | Docking Evidence |
+|------------------|------------------|------------------|
+| Trimethoprim     | Antibacterial    | Stable binding pose in active site |
+| Pyrimethamine    | Antiparasitic    | Clear interactions with DHFR residues |
+
 
 # DHFR Summary
 
@@ -164,7 +171,6 @@ Targeted by:
 
 A strong example target for structure-guided drug design.
 
----
 
 # Future Extensions
 
@@ -175,7 +181,6 @@ A strong example target for structure-guided drug design.
 - ADMET prediction  
 - ML-guided ligand prioritization  
 
----
 
 # Notes
 
