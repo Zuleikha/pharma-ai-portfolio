@@ -9,7 +9,6 @@ A complete workflow demonstrating:
 - Docking and pose evaluation  
 - Visualizing ligand - protein interactions  
 
----
 ## Pipeline Overview
 
 Input:
@@ -57,8 +56,6 @@ alphafold_target_pipeline/
 └── src/
 ```
 
----
-
 # Notebook Workflows
 
 ## 1. 01_run_alphafold_colab.ipynb  
@@ -68,8 +65,6 @@ Runs ColabFold to generate:
 - MMseqs2-based MSA  
 - PAE and pLDDT plots  
 - Outputs stored in `output/structures/`
-
----
 
 ## 2. 02_structure_analysis.ipynb  
 Visualization using py3Dmol and PyMOL, producing:
@@ -81,8 +76,6 @@ Visualization using py3Dmol and PyMOL, producing:
 - Surface visualizations  
 
 Saved in `images/structures/protein/`.
-
----
 
 # Protein Structure Gallery
 
@@ -106,9 +99,6 @@ Pocket 14 - Pocket overlaid with ligand
 
 Pocket 14 - Annotated / labeled visualization  
 ![Pocket Labeled](images/structures/protein/dhfr_fpocket_labeled.png)
-
-
----
 
 # Docking Workflow
 
