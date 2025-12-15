@@ -4,12 +4,29 @@ A complete workflow demonstrating:
 
 - Running AlphaFold/ColabFold  
 - Generating and analyzing protein structures  
-- Producing high‑quality structural images  
+- Producing high - quality structural images  
 - Preparing ligands  
 - Docking and pose evaluation  
-- Visualizing ligand–protein interactions  
+- Visualizing ligand - protein interactions  
 
 ---
+## Pipeline Overview
+
+Input:
+- DHFR protein sequence
+- Small molecule ligands
+
+Process:
+- Predict DHFR structure using AlphaFold
+- Analyse structure and identify binding pocket
+- Prepare ligands for docking
+- Dock ligands into the DHFR active site
+- Inspect binding poses and interactions
+
+Output:
+- Docked ligand poses
+- Visual evidence of binding
+- Candidate inhibitors for further prioritisation
 
 # Folder Structure
 
@@ -59,7 +76,7 @@ Visualization using py3Dmol and PyMOL, producing:
 
 - Cartoon representations  
 - Greyscale versions  
-- All‑atom stick models  
+- All - atom stick models  
 - Active-site residue views  
 - Surface visualizations  
 
@@ -81,19 +98,25 @@ Saved in `images/structures/protein/`.
 
 ## FPocket Pocket Visualizations
 
-Pocket 14 — Clean surface + pocket atoms  
+Pocket 14 - Clean surface + pocket atoms  
 ![Pocket Clean](images/structures/protein/dhfr_fpocket_clean.png)
 
-Pocket 14 — Pocket overlaid with ligand  
+Pocket 14 - Pocket overlaid with ligand  
 ![Pocket Ligand](images/structures/protein/dhfr_fpocket_ligand_overlay.png)
 
-Pocket 14 — Annotated / labeled visualization  
+Pocket 14 - Annotated / labeled visualization  
 ![Pocket Labeled](images/structures/protein/dhfr_fpocket_labeled.png)
 
 
 ---
 
 # Docking Workflow
+
+Purpose:
+- Evaluate how known inhibitors bind to the DHFR active site
+- Compare binding poses visually
+- Support qualitative ranking of candidate molecules
+
 
 Ligands:
 
@@ -139,7 +162,7 @@ Targeted by:
 - Trimethoprim  
 - Pyrimethamine  
 
-A strong example target for structure‑guided drug design.
+A strong example target for structure-guided drug design.
 
 ---
 
