@@ -144,6 +144,9 @@ Docking and interaction images:
 | Trimethoprim     | Antibacterial    | Stable binding pose in active site |
 | Pyrimethamine    | Antiparasitic    | Clear interactions with DHFR residues |
 
+These docking results provide structured inputs that can later be used to train or guide machine learning models for compound prioritisation.
+
+
 
 # DHFR Summary
 
