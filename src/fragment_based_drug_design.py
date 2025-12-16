@@ -4,6 +4,11 @@ Fragment-Based Drug Design
 Reusable utilities for fragment generation, filtering, scoring,
 and simple analogue exploration for early-stage drug discovery.
 """
+# Project 2 – Fragment and Analogue Expansion (DHFR)
+# Purpose: explore simple chemical analogues of a known DHFR inhibitor
+# Method: fragment decomposition and analogue generation using RDKit
+# Scope: early-stage chemical space exploration (no optimisation or ML yet)
+
 
 from rdkit import Chem
 from rdkit.Chem import AllChem, Descriptors, Crippen, Lipinski
