@@ -146,6 +146,9 @@ def generate_trimethoprim_analogues(smiles: str, max_variants: int = 5):
 
     return analogues
 
+# Project 3 placeholder: ML-assisted compound prioritisation (to be added)
+
+
 # if __name__ == "__main__":
 #     designer = FragmentBasedDesign()
 #     smiles_list = ['CC(C)Cc1ccc(cc1)C(C)C(=O)O', 'CC(=O)Oc1ccccc1C(=O)O']
