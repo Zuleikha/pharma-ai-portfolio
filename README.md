@@ -14,13 +14,12 @@ This portfolio demonstrates how AI and machine learning integrate with structura
 
 ## Core Projects
 
-This portfolio is intentionally limited to three core areas:
+This portfolio covers four key areas in computational drug discovery:
 
-1. Structure based target analysis and docking  
-2. Fragment based drug design and molecular optimisation  
-3. Data driven molecular property analysis and filtering  
-
-Together, these represent key steps in early discovery workflows.
+1. **Structure-based target analysis and docking** - AlphaFold structure prediction and molecular docking
+2. **Fragment-based drug design** - Molecular optimization and fragment growing
+3. **Machine learning for bioactivity prediction** - Random Forest models for compound screening
+4. **Data-driven molecular property analysis** - Drug-likeness filtering and ADMET prediction
 
 ---
 
@@ -81,6 +80,21 @@ Steps covered:
 - Binding pose and interaction analysis  
 
 ---
+
+### Machine Learning Bioactivity Prediction (DHFR)
+
+ML pipeline for predicting compound activity against drug targets.
+
+**[→ View Project](./bioactivity-prediction/)**
+
+Key features:
+- ChEMBL database integration for bioactivity data
+- Molecular descriptor generation (MW, LogP, TPSA, fingerprints)
+- Random Forest classification (active vs inactive)
+- Model evaluation with ROC-AUC, precision, recall
+- Production-ready prediction pipeline
+
+**Business impact**: Screen 1000s of compounds in minutes, reducing experimental costs by $1000-5000 per compound tested.
 
 ### Fragment Based Drug Design
 
