@@ -153,9 +153,10 @@ def demo_analysis(csv_filename: str = "molecular_analysis_results.csv") -> pd.Da
     smiles_list = list(examples.values())
     df = analyzer.analyze_batch(smiles_list)
 
-    # Save CSV in the same directory as this module (src/)
-    module_dir = os.path.dirname(__file__)
-    csv_path = os.path.join(module_dir, csv_filename)
+    # Save CSV in output dir
+    output_dir = os.path.join(os.path.dirname(__file__), '..', 'output')
+    os.makedirs(output_dir, exist_ok=True)
+    csv_path = os.path.join(output_dir, csv_filename)
     df.to_csv(csv_path, index=False)
 
     print(f"\nCSV file saved to: {csv_path}")

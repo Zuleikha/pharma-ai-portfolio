@@ -401,30 +401,30 @@ def main():
         if mol is None:
             continue
 
-        print(f"✓ 3D structure generated")
-        print(f"✓ Hydrogens added: {mol.GetNumAtoms()} total atoms")
+        print(f"[OK] 3D structure generated")
+        print(f"[OK] Hydrogens added: {mol.GetNumAtoms()} total atoms")
 
         # Generate conformers
         num_conf = prep.generate_conformers(mol, num_conformers=10)
-        print(f"✓ Generated {num_conf} conformers")
+        print(f"[OK] Generated {num_conf} conformers")
 
         # Calculate energies
         energies = prep.calculate_conformer_energies(mol)
         if energies:
-            print(f"✓ Energy range: {min(energies):.2f} to {max(energies):.2f} kcal/mol")
+            print(f"[OK] Energy range: {min(energies):.2f} to {max(energies):.2f} kcal/mol")
             lowest_conf = prep.get_lowest_energy_conformer(mol)
-            print(f"✓ Lowest energy conformer: {lowest_conf}")
+            print(f"[OK] Lowest energy conformer: {lowest_conf}")
 
         # Assign charges
         prep.assign_partial_charges(mol)
-        print(f"✓ Partial charges assigned")
+        print(f"[OK] Partial charges assigned")
 
         # Save files
         output_prefix = name.lower().replace(' ', '_')
         result = prep.prepare_and_save(smiles, output_prefix, formats=['pdb', 'sdf'])
 
         if result['success']:
-            print(f"\n📁 Files saved:")
+            print(f"\n[>>] Files saved:")
             for filename in result['saved_files']:
                 print(f"   - {filename}")
 
