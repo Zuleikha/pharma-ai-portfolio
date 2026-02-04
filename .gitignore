@@ -1,92 +1,56 @@
-# -----------------------------
-# Python / Environment
-# -----------------------------
-venv/
-env/
-.venv/
-ENV/
+# Git files
+.git
+.gitignore
 
-# Byte-compiled / cache
-__pycache__/
+# Python cache
+__pycache__
 *.pyc
 *.pyo
 *.pyd
-*.pdb
-*.pkl
-*.sqlite
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
 
-# Conda environment artifacts
-conda-meta/
-*.conda
-*.yaml~
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
 
-# Caches
-*.cache/
-.cache/
+# Conda environments
+.conda/
+pharma-ai-env/
+pharma_env/
 
-# -----------------------------
-# Jupyter
-# -----------------------------
-.ipynb_checkpoints/
-*.ipynb_checkpoints
-
-# -----------------------------
-# OS / Editor Files
-# -----------------------------
-.DS_Store
-Thumbs.db
+# IDE
+.vscode/
+.idea/
 *.swp
 *.swo
-*.tmp
 
-# VSCode
-.vscode/
-.history/
+# OS files
+.DS_Store
+Thumbs.db
 
-# PyCharm
-.idea/
+# Output files (not needed in container)
+output/
+*.pkl
+*.csv
+*.png
 
-# -----------------------------
-# Logs
-# -----------------------------
-*.log
-logs/
-output.log
+# Notebooks (not needed in container)
+notebooks/
+.ipynb_checkpoints/
 
-# -----------------------------
-# AlphaFold / Docking / Modeling Artifacts
-# -----------------------------
+# Documentation
+docs/
+*.md
+!README.md
 
-# AutoDock Vina outputs (optional – keep if needed)
-*.pdbqt
-*.dlg
-
-# MSA temp data (ColabFold & AlphaFold)
-msa/
-*.a3m
-*.sto
-
-# PAE JSON from ColabFold (optional)
-*.json
-*.npz
-
-# LARGE MODELS (optional)
-# Uncomment if you store heavy AF2 models locally
-# models/
-# params/
-
-# -----------------------------
-# Portfolio Generated Images
-# -----------------------------
-# Ignore temporary rendering outputs
-*.png~
-*.jpg~
-render_cache/
-temp_images/
-
-# -----------------------------
-# Build / Distribution
-# -----------------------------
-build/
-dist/
-*.egg-info/
+# Other
+archive/
+alphafold_target_pipeline/
+bioactivity-prediction/
